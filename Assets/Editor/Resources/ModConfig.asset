@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 615501dbe4f3fe94fbf4b564abb10237, type: 3}
+  m_Name: ModConfig
+  m_EditorClassIdentifier: 
+  id: needy_vector_addition
+  title: Vector Addition (Needy)
+  author: NickLatkovich
+  description: "When the module is activated it generates 4-13 vectors. You can switch
+    between vectors using the \"<\" and \">\" buttons. Find and delete (using the
+    \"x\" button) the vector, without which the sum of all other vectors is equal
+    to zero.\r"
+  version: 1.0.0
+  outputFolder: build
+  previewImage: {fileID: 2800000, guid: 0aa1ef69728f4ac428dffebef838dbb7, type: 3}
