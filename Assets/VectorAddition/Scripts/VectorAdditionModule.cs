@@ -5,8 +5,9 @@ using System.Text.RegularExpressions;
 using UnityEngine;
 
 public class VectorAdditionModule : MonoBehaviour {
+	public const bool FORCE_EXTRA_TIME_ADDITION = false;
 	public const float TWITCH_CYCLE_INTERVAL = 3f;
-	public const float TWITCH_NEEDY_TIME = 152f;
+	public const float TWITCH_NEEDY_EXTRA_TIME = 80f;
 	private static readonly Color[] COLORS = { Color.red, Color.blue, Color.magenta, Color.yellow, Color.cyan };
 
 	private static int moduleIdCounter = 1;
@@ -61,7 +62,6 @@ public class VectorAdditionModule : MonoBehaviour {
 	}
 
 	private void OnActivate() {
-		if (TwitchPlaysActive) Needy.CountdownTime = TWITCH_NEEDY_TIME;
 		Needy.OnNeedyActivation += OnNeedyActivation;
 		Needy.OnNeedyDeactivation += OnNeedyDeactivation;
 		Needy.OnTimerExpired += OnTimerExpired;
@@ -103,6 +103,7 @@ public class VectorAdditionModule : MonoBehaviour {
 	}
 
 	private void OnNeedyActivation() {
+		if (TwitchPlaysActive || FORCE_EXTRA_TIME_ADDITION) Needy.SetNeedyTimeRemaining(Needy.GetNeedyTimeRemaining() + TWITCH_NEEDY_EXTRA_TIME);
 		onceActivated = true;
 		activated = true;
 		activationTime = Time.time;

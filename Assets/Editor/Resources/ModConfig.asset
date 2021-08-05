@@ -18,6 +18,6 @@ MonoBehaviour:
     between vectors using the \"<\" and \">\" buttons. Find and delete (using the
     \"x\" button) the vector, without which the sum of all other vectors is equal
     to zero.\r"
-  version: 1.0.0
+  version: 1.0.1
   outputFolder: build
   previewImage: {fileID: 2800000, guid: 0aa1ef69728f4ac428dffebef838dbb7, type: 3}
